@@ -1,0 +1,33 @@
+@model IEnumerable<(string ProductId, float Score)>
+
+@{
+    ViewData["Title"] = "Recomendaciones";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning">
+        No se encontraron recomendaciones para ese usuario.
+    </div>
+}
+else
+{
+    <table class="table table-striped">
+    <thead>
+        <tr><th>Producto</th><th>Score</th></tr>
+    </thead>
+    <tbody>
+    @foreach (var r in Model)
+    {
+        <tr>
+            <td>@r.ProductId</td>
+            <td>@r.Score.ToString("F2")</td>
+        </tr>
+    }
+    </tbody>
+</table>
+}
+
+<a asp-action="Recommend" class="btn btn-secondary">Volver</a>

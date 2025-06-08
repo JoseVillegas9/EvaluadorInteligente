@@ -1,0 +1,13 @@
+@{ 
+    ViewData["Title"] = "Analizar Sentimiento"; 
+}
+
+<h1>Analizar Sentimiento</h1>
+
+<form asp-action="Analyze" method="post">
+  <div class="form-group">
+    <label for="text">Escribe tu opinión:</label>
+    <textarea id="text" name="text" class="form-control" rows="4"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary mt-2">Analizar</button>
+</form>

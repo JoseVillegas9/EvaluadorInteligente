@@ -1,0 +1,11 @@
+UserId,ProductId,Label
+user1,product1,5
+user1,product2,3
+user2,product1,4
+user2,product3,2
+user3,product2,4
+user3,product3,5
+user4,product1,1
+user4,product4,5
+user5,product2,2
+user5,product4,3

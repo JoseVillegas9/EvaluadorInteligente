@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Resultado de Análisis";
+    var prediction = ViewBag.Prediction as string ?? "N/A";
+    var probability = (float?)ViewBag.Probability ?? 0f;
+}
+
+<h1>Resultado de Análisis</h1>
+
+<div class="alert alert-info">
+  <strong>Sentimiento:</strong> @prediction<br />
+  <strong>Probabilidad:</strong> @String.Format("{0:P2}", probability)
+</div>
+
+<a asp-action="Analyze" class="btn btn-secondary">Volver</a>
